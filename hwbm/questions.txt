@@ -1,0 +1,10 @@
+What is the capital of France?:Paris,Erevan,Rome,Madrid
+What will be count 1+1:2,1,-8,1000000
+What is the best programming office:Padc,Synopsys,Google,Instigate
+Who painted the Mona Lisa?:Leonardo Da Vinci,Vincent van Gogh,bajanaxs,Mer harevan@
+Who create the Linux?:Linus Torvalds,Serj Sargsyan,Jackie Chan,Astvac Gite
+How much planets in solar system?:8,9,10,7
+What is the capital of Dania?:Copenhagen,Dublin,Riga,Bern
+How many carats clear Gold?:24,99,1,68
+Who is the person on the 100$ bill?:Benjamin Franklin,Franklin Ruezvelt,John Sina,George Washington
+Python Programming is written in...:C Programming,Py Framework,React,Algorithmic functions
