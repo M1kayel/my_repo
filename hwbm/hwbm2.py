@@ -20,7 +20,6 @@ def read_top_players(filename):
     md = {}
     f = open(filename,"r")
     q = f.read().strip().split("\n")
-    print(q)
     for i in q:
         a = i.split(":")
         md[a[0]] = a[1]
@@ -83,11 +82,28 @@ def game(questions,player_rating):
 
 correct, total = game(questions, top_players)
 
-top_players.setdefault(nickname,correct)
-print("TOP PLAYERS\n",top_players)
-f = open("top_players.txt","w")
-for k,v in top_players.items():
-    a = k + ":" + str(v) + "\n"
-    f.write(a)
-f.close()
+def update_top_players(questions,top_players):
+    top_players.setdefault(nickname, correct)
+    with open("top_players.txt", "w") as f :
+        for k, v in top_players.items():
+            a = k + ":" + str(v) + "\n"
+            f.write(a)
+    f.close()
+def sort_top_players(players):
+    ml = []
+    ml = (sorted(players.items(), key=lambda item: int(item[1]), reverse = True))
+    return ml
+
+update_top_players(questions, top_players)
+print(sort_top_players(top_players))
 print("\nYou have",correct,"correct answers from ",total,"\nThank you for playing Who Wants to Become a Millionaire!")
+
+
+
+     #during lessons
+#def sort_players(players):
+#    ml = list(players.items())
+#    ml.sort(key=lambda x: x[1], reverse = True)
+#    return ml 
+
+
