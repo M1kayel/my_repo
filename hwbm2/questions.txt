@@ -1,0 +1,10 @@
+What is the capital of France?Paris,Yerevan,Berlin,Moscow
+What is the capital of Spain?Madrid,Yerevan,Berlin,Moscow
+What is the capital of Norway?Oslo,Yerevan,Berlin,Moscow
+What is the capital of Portugal?Lisbon,Yerevan,Berlin,Moscow
+What is the capital of China?Beijing,Yerevan,Berlin,Moscow
+What is the capital of Japan?Tokio,Yerevan,Berlin,Moscow
+What is the capital of Belarus?Minsk,Yerevan,Berlin,Moscow
+What is the capital of Ukraine?Kiev,Yerevan,Berlin,Moscow
+What is the capital of Kazakhstan?Astana,Yerevan,Berlin,Moscow
+What is the capital of Australia?Canberra,Yerevan,Berlin,Moscow
