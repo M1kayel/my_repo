@@ -1,0 +1,4 @@
+# weather forecast site link
+https://openweathermap.org/
+#Api key for weather forecast 
+"8c11a6c02a2cc62f157e4b6a10735d8f"
