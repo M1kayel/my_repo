@@ -7,7 +7,7 @@ import 'package:flutter_application_8/models/movie.dart';
 class MovieService {
   static Future<List<Movie>> fetchMovies() async {
     final response = await http.get(Uri.parse(
-      '${ApiConfig.baseUrl}/movie/popular?api_key=${ApiConfig.apiKey}',
+      '${ApiConfig.host}/movie/popular?api_key=${ApiConfig.apiKey}',
     ));
     if (response.statusCode == 200) {
       final data = json.decode(response.body);
