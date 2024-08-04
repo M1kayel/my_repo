@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'movie_list_view.dart';
-import 'movie_service.dart';
+import 'package:flutter_application_8/movie/movie_list_view.dart';
+import 'package:flutter_application_8/movie/movie_service.dart';
 import 'models/movie.dart';
 
 void main() {

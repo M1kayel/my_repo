@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_application_8/api_config.dart';
-import 'models/movie.dart';
+import 'package:flutter_application_8/models/movie.dart';
 
 class MovieListView extends StatelessWidget {
   final List<Movie> movies;
