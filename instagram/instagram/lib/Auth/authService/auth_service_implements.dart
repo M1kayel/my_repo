@@ -1,0 +1,37 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+
+import 'auth_service.dart';
+
+class AuthServiceWork implements AuthService {
+  AuthServiceWork(this._firestore);
+  final FirebaseFirestore _firestore;
+
+  @override
+  Future<UserCredential> signInWithGoogle() async {
+    final gUser = await GoogleSignIn().signIn();
+    final gAuth = await gUser?.authentication;
+    final credential = GoogleAuthProvider.credential(
+      accessToken: gAuth?.accessToken,
+      idToken: gAuth?.idToken,
+    );
+    final userCredential =
+        await FirebaseAuth.instance.signInWithCredential(credential);
+
+    if (userCredential.user != null) {
+      final userDoc =
+          _firestore.collection('users').doc(userCredential.user!.uid);
+      final docSnapshot = await userDoc.get();
+
+      if (!docSnapshot.exists) {
+        userDoc.set({
+          'uid': userCredential.user!.uid,
+          'email': userCredential.user!.email,
+        });
+      }
+    }
+
+    return userCredential;
+  }
+}
